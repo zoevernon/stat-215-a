@@ -1,0 +1,33 @@
+% taken from Rebecca Barter 
+\documentclass{article}
+
+\usepackage{float}
+
+\title{Some reasonable lab title}
+\author{Jane Smith, SID: 0123456789}
+
+\begin{document}
+
+\maketitle
+
+To compile this document, click on "Compile PDF". Note that if you have never installed LaTeX, you will need to do so in order to compile this document!
+
+Place some text here.
+
+\section{Section Heading}
+
+\subsection{Sub-section heading}
+<<echo = FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.height=3, fig.width=4, fig.cap = "This is a reasonable plot", fig.pos = "H">>=
+library(tidyverse)
+# make some reasonable plot
+ggplot(iris) + geom_point(aes(x = Sepal.Width, y = Sepal.Length, col = Species)) + theme_classic()
+@
+
+
+Here is some math.
+
+\[y = a + bx\]
+
+Here is the same math but inline $y = ax + b$
+
+\end{document}
